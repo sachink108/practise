@@ -10,6 +10,22 @@ def twoSum(nums: list[int], target: int) -> list[int]:
     return [-1, -1]
 
 
-print(twoSum([2, 7, 11, 15], 9))
-print(twoSum([3, 2, 4], 6))
-print(twoSum([3, 3], 6))
+def twoNumberSum(array, targetSum):
+    _map = dict()
+    ret = []
+    for i in array:
+        breakpoint()
+        diff = targetSum - i
+        if diff in _map and diff is not i:
+            return [i, diff]
+        else:
+            _map[diff] = 1
+
+    return ret
+
+
+# print(twoNumberSum([3, 11, -4, -1], 10))
+
+# print(twoSum([2, 7, 11, 15], 9))
+# print(twoSum([3, 2, 4], 6))
+# print(twoSum([3, 3], 6))
